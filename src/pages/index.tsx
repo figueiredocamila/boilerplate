@@ -1,18 +1,21 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { ReactNode } from 'react'
 
-export default function Home() {
+type Props = {
+  title: string
+}
+
+const Home = ({ title = 'React Avançado!' }: Props): ReactNode => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>react avancado</h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -63,3 +66,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home
