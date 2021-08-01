@@ -29,7 +29,6 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/explicity-module-boundary-types": "off"
+    "react/react-in-jsx-scope": "off"
   }
 }
