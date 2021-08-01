@@ -1,15 +1,18 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Document, {
   Html,
   Head,
   Main,
   NextScript,
-  DocumentContext
+  DocumentContext,
+  DocumentInitialProps
 } from 'next/document'
+import { ReactElement } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext): Promise<any> {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
@@ -35,7 +38,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  render(): any {
+  render(): ReactElement {
     return (
       <Html lang="pt-BR">
         <Head />
