@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 if (!self.define) {
   let e,
     s = {}
